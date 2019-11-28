@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Khoss@Livreur
                 </div>
 
                 <div class="links">
