@@ -1,6 +1,9 @@
 @extends('livreur.layout')
 @section('content') 
 
+
+
+
   <!-- Header -->
     <header class="masthead">
   <img class="img-fluid" src="{{asset('img1/header-bg.jpg')}}" alt="">
