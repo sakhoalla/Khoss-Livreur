@@ -9,6 +9,7 @@
 <th>Prix du Produit</th> <th></th>  <th></th>   <th></th><th></th>   <th></th>
 <th>Description du Produit</th> <th></th>  <th></th>   <th></th><th></th>   <th></th>
 <th>Category_Id du Produit</th> <th></th>  <th></th>   <th></th><th></th>   <th></th>
+<th>Image du Produit</th> <th></th>  <th></th>   <th></th><th></th>   <th></th>
 <th></th>
 </tr>
 
@@ -26,6 +27,7 @@
        <th>{{$produit->prix}} {{ $product->category->name ?? '' }}</th>  <th></th>  <th></th>   <th></th><th></th>   <th></th>
        <th>{{$produit->description}}</th>  <th></th>  <th></th>   <th></th><th></th>   <th></th>
        <th>{{$produit->category_id}}</th>  <th></th>  <th></th>   <th></th><th></th>   <th></th>
+       <th>{{$produit->product_image}}</th>  <th></th>  <th></th>   <th></th><th></th>   <th></th>
        <th>
 
        <p><a href="{{route('editer_produit',['id'=>$produit->id])}}">Editer</a>

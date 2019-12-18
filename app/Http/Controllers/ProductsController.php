@@ -58,7 +58,7 @@ public function create()
             "product_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2048'
         ]);
             
-            $produit = new Product();
+           $produit = new \App\Product();
             //On verfie si une image est envoyée
             if($request->has('product_image')){
                 //On enregistre l'image dans un dossier
@@ -68,12 +68,11 @@ public function create()
                 //Nous enregistrerons nos fichiers dans /uploads/images dans public
                 $folder = '/uploads/images/';
                 //Nous allons enregistrer le chemin complet de l'image dans la BD
-                $produit->images = $folder.$image_name.'.'.$image->getClientOriginalExtension();
+                #dd($folder.$image_name.'.'.$image->getClientOriginalExtension());
+                $produit->product_image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
                 //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la methode uploadImage();
                 $this->uploadImage($image, $folder, 'public', $image_name);
             }
-         
-       $produit =new \App\Product();
        $produit->name = $request->input('name');
        $produit->prix = $request->input('prix');
        $produit->description = $request->input('description');
