@@ -97,6 +97,9 @@ img::-moz-selection {
   border-color: #fed136;
 }
 
+
+
+
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: #fec810 !important;
   border-color: #fec810 !important;
@@ -206,6 +209,15 @@ header.masthead .intro-text .intro-heading {
     padding-top: 300px;
     padding-bottom: 200px;
   }
+
+ header.masthead .intro-text .intro-lead-in {
+    position: absolute;
+    top: 2%;
+    background: 
+    rgba(0, 0, 0, 0.2);
+}
+
+
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
     font-style: italic;

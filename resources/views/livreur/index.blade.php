@@ -6,12 +6,16 @@
 
   <!-- Header -->
     <header class="masthead">
+
+    
   <img class="img-fluid" src="{{asset('img1/header-bg.jpg')}}" alt="">
+  <div class="container accueill">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
+        <div  class="intro-lead-in">Welcome To Our Studio!</div>
         <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Khoss@Livreur</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('service') }}">Khoss@Livreur</a>
+      </div>
       </div>
     </div>
   </header>

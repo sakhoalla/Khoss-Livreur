@@ -54,16 +54,32 @@ public function create()
             'name'=>'required|max:50',
             'prix' => 'required|max:5000000|numeric',
             'description' => 'max:1000000',
-            'category_id' =>  'max:150'
+            'category_id' =>  'max:150',
+            "product_image" => 'nullable | image | mimes:jpeg,png,jpg,gif | max: 2048'
         ]);
-
+            
+            $produit = new Product();
+            //On verfie si une image est envoyée
+            if($request->has('product_image')){
+                //On enregistre l'image dans un dossier
+                $image = $request->file('product_image');
+                //Nous allons definir le nom de notre image en combinant le nom du produit et un timestamp
+                $image_name = Str::slug($request->input('name')).'_'.time();
+                //Nous enregistrerons nos fichiers dans /uploads/images dans public
+                $folder = '/uploads/images/';
+                //Nous allons enregistrer le chemin complet de l'image dans la BD
+                $produit->images = $folder.$image_name.'.'.$image->getClientOriginalExtension();
+                //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la methode uploadImage();
+                $this->uploadImage($image, $folder, 'public', $image_name);
+            }
+         
        $produit =new \App\Product();
        $produit->name = $request->input('name');
        $produit->prix = $request->input('prix');
        $produit->description = $request->input('description');
        $produit->category_id = $request->input('category_id');
        $produit->save();
-       return redirect('/');
+       return redirect(route('product.index'));
     }
     
 

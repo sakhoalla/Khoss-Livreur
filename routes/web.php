@@ -48,6 +48,25 @@ Route::get("/commande/create/{id}", "CommandesController@create")->name('create_
 Route::patch("/commande/create/{id}", "CommandesController@update")->name('update_commande');
 
 
+
+
+Route::get("/Portfolio/portfolio", "PortfolioController@Portfolio")->name('portfolio');
+
+
+Route::get("/Accueill/accueill", "AccueillController@Accueill")->name('accueill');
+
+
+Route::get("/Service/service", "ServiceController@Service")->name('service');
+
+
+
+Route::get("/Contact/contact", "ContactController@Contact")->name('contact');
+
+
+Route::get("/Team/team", "TeamController@Team")->name('team');
+
+
+
 //normale
 //Route::get("/Livreur", "CategoriesController@index" );
 //Route::get("/Categories", "CategoriesController@index" );
