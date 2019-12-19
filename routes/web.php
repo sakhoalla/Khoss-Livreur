@@ -49,6 +49,12 @@ Route::patch("/commande/create/{id}", "CommandesController@update")->name('updat
 
 
 
+Route::get("/contact/edit/{id}", "ContactsController@edit")->name('editer_contact');
+Route::patch("/contact/edit/{id}", "ContactsController@update")->name('update_contact');
+Route::get("/contact/create/{id}", "ContactsController@create")->name('create_contact');
+Route::patch("/contact/create/{id}", "ContactsController@update")->name('update_contact');
+Route::get("/Contact/contact", "ContactsController@store")->name('contact-store');
+
 
 Route::get("/Portfolio/portfolio", "PortfolioController@Portfolio")->name('portfolio');
 
@@ -61,6 +67,9 @@ Route::get("/Service/service", "ServiceController@Service")->name('service');
 
 
 Route::get("/Contact/contact", "ContactController@Contact")->name('contact');
+
+
+Route::get("/A_Propos/about", "A_ProposController@A_Propos")->name('about');
 
 
 Route::get("/Team/team", "TeamController@Team")->name('team');

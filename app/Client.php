@@ -12,5 +12,9 @@ class Client extends Model
     public function commandes (){
         return $this->hasMany("App\Commande");
     }
+
+    public function contacts (){
+        return $this->hasMany("App\Contact");
+    }
 }
 

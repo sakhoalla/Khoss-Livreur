@@ -48,7 +48,7 @@
             <a class="nav-link js-scroll-trigger" href="{{ route('portfolio') }}">Produit</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="{{ route('about') }}">A_Propos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ route('team') }}">Team</a>
