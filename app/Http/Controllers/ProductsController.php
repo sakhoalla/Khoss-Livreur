@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 //Au début du fichier on importe les classes:
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -133,7 +134,7 @@ public function create()
                //Nous enregistrerons nos fichiers dans /uploads/images dans public
                $folder = '/uploads/images/';
                $image_name = Str::slug($request->input('name')).'_'.time();
-               $product->images = $folder.$image_name.'.'.$image->getClientOriginalExtension();
+               $product->product_image = $folder.$image_name.'.'.$image->getClientOriginalExtension();
                //Maintenant nous pouvons enregistrer l'image dans le dossier en utilisant la méthode uploadImage();
                $this->uploadImage($image, $folder, 'public', $image_name);
            }
@@ -141,7 +142,6 @@ public function create()
            $product->prix = $request->input('prix');
            $product->description = $request->input('description');
            $product->category_id = $request->input('category_id');
-    
            $product->save();
        }
        return redirect()->back();
