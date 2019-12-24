@@ -10,6 +10,21 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    /**Cette méthode va determiner si le user connecté a un role admin*/
+public function isAdmin(){
+    return strtolower(@$this->roles) === 'admin'? true : false;
+ }
+
+ /**Cett méthode va determiner si le user connecté a un role moderator*/
+public function isModerator(){
+    return strtolower(@$this->roles) === 'moderator'? true : false;
+ }
+
+
+
+ 
+ 
+
     /**
      * The attributes that are mass assignable.
      *

@@ -45,6 +45,6 @@
 
 </table>
 
-<p><a href="{{route('create_client',['id'=>$client->id])}}">Ajouter</a>
+ <p><a href="{{route('create_client',['id'=>$client->id])}}">Ajouter</a> 
 
 @endsection

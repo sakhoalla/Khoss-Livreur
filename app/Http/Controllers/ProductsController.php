@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;//D’abord il faut importer la classe en ajoutant le code suivant juste après le namespace
 
+$user = Auth::user();//Ce code aura pour effet de récupérer le user connecté;
+$user_id = Auth::id();//Nous pouvons aussi récupérer l’id du user connecté comme suite;
 
 
 class ProductsController extends Controller
@@ -78,6 +81,7 @@ public function create()
        $produit->prix = $request->input('prix');
        $produit->description = $request->input('description');
        $produit->category_id = $request->input('category_id');
+       $produit->user_id  = Auth::id();
        $produit->save();
        return redirect(route('product.index'));
     }
@@ -94,6 +98,13 @@ public function create()
         $products = \App\Product::OrderBy('created_at', 'DESC')->get();
     }
 
+    public function __construct()
+{
+   $this->middleware('auth');
+   
+}
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -101,7 +112,9 @@ public function create()
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
+
     {
+        $this->authorize('admin');
        $produit = \App\Product::find($id);//on recupere le produit
        
           $categories = \App\Categorie::pluck('name','id');
