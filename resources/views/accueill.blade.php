@@ -22,6 +22,39 @@
       <img src="{{asset('img1/acceuil/06-full.jpg')}}"class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
+      <img src="{{asset('img1/produit/02-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/03-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/04-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/05-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/06-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/07-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/08-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/09-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/10-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/11-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('img1/produit/12-full.jpg')}}"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
       <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>

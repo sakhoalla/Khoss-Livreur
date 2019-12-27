@@ -33,9 +33,6 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
 
-  @can('admin')
-   <a class="dropdown-item" href="/admin/">Back Office</a>
-@endcan
 
    <a class="dropdown-item" href=<!-- Custom styles for this template -->
   <link href="{{asset('css1/agency.min.css')}}" rel="stylesheet">
@@ -50,15 +47,15 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
-        @can('admin')
-   <a class="dropdown-item" href="/admin/">Back Office</a>
-@endcan
+
   
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
         <li class="nav-item">
+
+
             <a class="nav-link js-scroll-trigger" href="{{ route('accueill') }}">Accueill</a>
           </li>
           <li class="nav-item">
@@ -76,10 +73,13 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ route('contact') }}">Contact</a>
           </li>
+         
        
 
                         <!-- Authentication Links  login pour connecter -->
                         @guest
+
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -99,6 +99,11 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+
+
+                        @can('admin')
+                      <a class="dropdown-item" href="/admin/">Back Office</a>
+                        @endcan
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

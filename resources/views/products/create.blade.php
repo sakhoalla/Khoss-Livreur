@@ -3,7 +3,7 @@
 <div class="container">
        <div><h1>{{__('Enregistrement d\'un produit')}}</h1></div>
        <div class="container">
-       <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
+       <form  method="post" enctype="multipart/form-data">
                @csrf
                <div>
                    <input type="text" name="name" class="form-control" placeholder="le nom du produit">

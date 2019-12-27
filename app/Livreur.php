@@ -16,6 +16,10 @@ class Livreur extends Model
         public function produits (){
             return $this->belongsToMany("App\Produit");
         }
+
+        public function contacts (){
+            return $this->hasMany("App\Contact");
+        }
 }
 
 
