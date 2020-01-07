@@ -1,4 +1,7 @@
 
+@extends('livreur.layout')
+@section('content')
+
 
 <div class="container">
        <div><h1>{{__('Enregistrement d\'un produit')}}</h1></div>
@@ -38,7 +41,7 @@
                </div>
            </form>
 
-
+           @endsection
 
 
 

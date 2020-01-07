@@ -1,10 +1,63 @@
 @extends('livreur.layout')
-@section('content')
+@section('content') 
+
+<h1></h1><br>
+
+
+
+
+<h1></h1><br>
+
+
+
+<h1></h1><br>
+
+<h1></h1><br>
+
+<h1></h1><br>
+
+
+
+
+<h1></h1><br>
+
+
+
+<h1></h1><br>
+
+<h1></h1><br>
+
+
+<h1></h1><br>
+
+
+
+
+<h1></h1><br>
+
+
+
+<h1></h1><br>
+
+<h1></h1><br>
+
+<h1></h1><br>
+
+
+
+
+<h1></h1><br>
+
+
+
+<h1></h1><br>
+
+<h1></h1><br>
 
 <div class="container">
-       <div><h1>{{__('Enregistrement d\'un Livreur')}}</h1></div>
+       <div><h1>{{__('Enregistrement d\'un Client')}}</h1></div>
        <div class="container">
-       <form action="{{route('livreur.store')}}" method="post">
+       <form action="{{route('client.store')}}" method="post">
        @csrf
             <div>
               <div class="col-md-6">
@@ -43,4 +96,6 @@
 
           </form>
 
-@endsection
+
+
+          @endsection

@@ -1,5 +1,6 @@
 
-
+@extends('livreur.layout')
+@section('content') 
 
 
 
@@ -11,3 +12,6 @@
    <div><input type="text" name="datelivraison" class="form-control" placeholder="la date de livraison du client" value="{{$commandes->datelivraison}}"> </div>
    <div> <button class="btn btn-primary">Enregistrer</button> </div>
 </form>
+
+
+@endsection

@@ -1,3 +1,6 @@
+@extends('livreur.layout')
+@section('content') 
+
 <div class="container">
        <div><h1>{{__('Enregistrement d\'un Client')}}</h1></div>
        <div class="container">
@@ -39,3 +42,5 @@
 
 
           </form>
+
+          @endsection

@@ -1,4 +1,6 @@
 
+@extends('livreur.layout')
+@section('content')
 
 
 <form action="{{route('update_categorie',['id'=>$categories->id])}}" method="post">
@@ -8,6 +10,7 @@
    <div> <button class="btn btn-primary">Enregistrer</button> </div>
 </form>
 
+@endsection
 
 
 

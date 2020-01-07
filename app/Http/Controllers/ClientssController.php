@@ -18,6 +18,7 @@ class ClientssController extends Controller
     */
    public function create()
    {
+    $this->authorize('admin');
        return view('clients.create');
    }
    /**
@@ -28,7 +29,7 @@ class ClientssController extends Controller
      */
     public function store(Request $request)
     {
-      
+        $this->authorize('admin');
         $data = $request->validate([
             'name'=>'required|max:50000',
             'email' => 'required|max:5000000',
@@ -64,6 +65,7 @@ class ClientssController extends Controller
      */
     public function edit($id)
     {
+        $this->authorize('admin');
         $clients = \App\Client::find($id);//on recupere le produit
    return view('clients.edit', compact('clients'));
     }
@@ -96,6 +98,7 @@ class ClientssController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('admin');
        $client = \App\Client::where('id',$id)->first();
        if($client)
            $client->delete();

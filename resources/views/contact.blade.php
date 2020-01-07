@@ -1,58 +1,7 @@
 @extends('livreur.layout')
 @section('content') 
 
-<h1></h1><br>
 
-
-
-
-<h1></h1><br>
-
-
-
-<h1></h1><br>
-
-<h1></h1><br>
-
-<h1></h1><br>
-
-
-
-
-<h1></h1><br>
-
-
-
-<h1></h1><br>
-
-<h1></h1><br>
-
-
-<h1></h1><br>
-
-
-
-
-<h1></h1><br>
-
-
-
-<h1></h1><br>
-
-<h1></h1><br>
-
-<h1></h1><br>
-
-
-
-
-<h1></h1><br>
-
-
-
-<h1></h1><br>
-
-<h1></h1><br>
 
 <div class="container">
        <div><h1>{{__('Enregistrement d\'un Client')}}</h1></div>

@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LivreurssController extends Controller
+class ContactsController extends Controller
 {
     public function index()
     {
-        $livreurs = \App\Livreur::all();
-        return view('livreurs.index', compact('livreurs'));
+        $contacts = \App\Contact::all();
+        return view('contacts.index', compact('contacts'));
     }
      /**
     * Show the form for creating a new resource.
@@ -19,7 +19,7 @@ class LivreurssController extends Controller
    public function create()
    {
     $this->authorize('admin');
-       return view('livreurs.create');
+       return view('contacts.create');
    }
    /**
      * Store a newly created resource in storage.
@@ -31,18 +31,18 @@ class LivreurssController extends Controller
     {
         $this->authorize('admin');
         $data = $request->validate([
-            'name'=>'required|max:50',
+            'name'=>'required|max:50000',
             'email' => 'required|max:5000000',
             'numero_telephone' => 'required|max:5000000',
             'message' =>  'max:1500'
         ]);
-      
-       $livreur = new \App\Livreur();
-       $livreur->name = $request->input('name');
-       $livreur->email = $request->input('email');
-       $livreur->numero_telephone = $request->input('numero_telephone');
-       $livreur->message = $request->input('message');
-       $livreur->save();
+
+       $contact = new \App\Contact();
+       $contact->name = $request->input('name');
+       $contact->email = $request->input('email');
+       $contact->numero_telephone = $request->input('numero_telephone');
+       $contact->message = $request->input('message');
+       $contact->save();
        return redirect('/');
     }
 
@@ -66,8 +66,8 @@ class LivreurssController extends Controller
     public function edit($id)
     {
         $this->authorize('admin');
-        $livreurs = \App\Livreur::find($id);//on recupere le produit
-   return view('livreurs.edit', compact('livreurs'));
+        $contacts = \App\Contact::find($id);//on recupere le produit
+   return view('contacts.edit', compact('contacts'));
     }
     /**
      * Update the specified resource in storage.
@@ -78,9 +78,9 @@ class LivreurssController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $livreur = \App\Livreur::find($id);
-       if($livreur){
-           $livreur->update([
+       $contact = \App\Contact::find($id);
+       if($contact){
+           $contact->update([
                'name' => $request->input('name'),
                'email' => $request->input('email'),
                'numero_telephone' => $request->input('numero_telephone'),
@@ -99,9 +99,9 @@ class LivreurssController extends Controller
     public function destroy($id)
     {
         $this->authorize('admin');
-       $client = \App\Livreur::where('id',$id)->first();
-       if($livreur)
-           $livreur->delete();
+       $contat = \App\Contact::where('id',$id)->first();
+       if($contact)
+           $contact->delete();
        return redirect()->back();
     }
 }

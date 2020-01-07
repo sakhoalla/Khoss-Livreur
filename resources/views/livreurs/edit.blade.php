@@ -1,5 +1,6 @@
 
-
+@extends('livreur.layout')
+@section('content')
 
 <form action="{{route('update_livreur',['id'=>$livreurs->id])}}" method="post">
    @csrf
@@ -10,3 +11,6 @@
    <div> <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="La description">{{$livreurs->message}}</textarea> </div>
    <div> <button class="btn btn-primary">Enregistrer</button> </div>
 </form>
+
+
+@endsection

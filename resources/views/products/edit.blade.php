@@ -1,4 +1,7 @@
 
+@extends('livreur.layout')
+@section('content')
+
 <form action="{{route('update_produit',['id'=>$produit->id])}}" method="post" enctype="multipart/form-data">
    @csrf
    @method('patch')
@@ -33,7 +36,7 @@
                </div>
            </form>
 
-
+           @endsection
 
 
 

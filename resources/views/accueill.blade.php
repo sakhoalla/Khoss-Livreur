@@ -4,7 +4,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{asset('img1/portfolio/01-full.jpg')}}" class="d-block w-100" alt="...">
-      
+  
     </div>
     <div class="carousel-item">
       <img src="{{asset('img1/acceuil/02-full.jpg')}}"class="d-block w-100" alt="...">
@@ -114,7 +114,107 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Portfolio</h2>
+        <h2 class="section-heading text-uppercase">Produit</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{asset('img1/produit/08-full.jpg')}}" class="d-block w-100" alt="...">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Threads</h4>
+          <p class="text-muted">Illustration</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{asset('img1/produit/09-full.jpg')}}" class="d-block w-100" alt="...">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Explore</h4>
+          <p class="text-muted">Graphic Design</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{asset('img1/produit/10-full.jpg')}}" class="d-block w-100" alt="...">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Finish</h4>
+          <p class="text-muted">Identity</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{asset('img1/produit/04-full.jpg')}}" class="d-block w-100" alt="...">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Lines</h4>
+          <p class="text-muted">Branding</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{asset('img1/produit/05-full.jpg')}}" class="d-block w-100" alt="...">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Southwest</h4>
+          <p class="text-muted">Website Design</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="{{asset('img1/produit/06-full.jpg')}}" class="d-block w-100" alt="...">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Window</h4>
+          <p class="text-muted">Photography</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Portfolio Grid -->
+<section class="bg-light page-section" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Livreur</h2>
         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>
@@ -207,12 +307,13 @@
   </div>
 </section>
 
+
 <!-- About -->
 <section class="page-section" id="about">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">About</h2>
+        <h2 class="section-heading text-uppercase">A_Propos</h2>
         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
     </div>

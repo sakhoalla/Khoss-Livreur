@@ -24,6 +24,7 @@ class CategoriessController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         return view('categories.create');
     }
 
@@ -36,7 +37,7 @@ class CategoriessController extends Controller
     public function store(Request $request)
     {
        
-        
+        $this->authorize('admin');
         $data = $request->validate([
             'name'=>'required|max:10000',
        
@@ -70,6 +71,7 @@ class CategoriessController extends Controller
      */
     public function edit($id)
     {
+        $this->authorize('admin');
         $categories = \App\Categorie::find($id);//on recupere le produit
    return view('categories.edit', compact('categories'));
     }
@@ -101,6 +103,7 @@ class CategoriessController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('admin');
        $categorie = \App\Categorie::where('id',$id)->first();
        if($categorie)
            $categorie->delete();

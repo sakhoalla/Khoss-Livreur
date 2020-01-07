@@ -18,6 +18,7 @@ class CommandesController extends Controller
     */
    public function create()
    {
+    $this->authorize('admin');
        return view('commandes.create');
    }
    /**
@@ -28,7 +29,7 @@ class CommandesController extends Controller
      */
     public function store(Request $request)
     {
-      
+        $this->authorize('admin');
         
         $data = $request->validate([
             'name'=>'required|max:100000',
@@ -64,6 +65,7 @@ class CommandesController extends Controller
      */
     public function edit($id)
     {
+        $this->authorize('admin');
         $commandes = \App\Commande::find($id);//on recupere le produit
    return view('commandes.edit', compact('commandes'));
     }
@@ -95,6 +97,7 @@ class CommandesController extends Controller
      */
     public function destroy($id)
     {
+        $this->authorize('admin');
        $commande = \App\Commande::where('id',$id)->first();
        if($commande)
            $commande->delete();

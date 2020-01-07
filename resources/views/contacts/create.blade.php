@@ -1,10 +1,11 @@
 @extends('livreur.layout')
 @section('content')
 
+
 <div class="container">
-       <div><h1>{{__('Enregistrement d\'un Livreur')}}</h1></div>
+       <div><h1>{{__('Enregistrement d\'un Contact')}}</h1></div>
        <div class="container">
-       <form action="{{route('livreur.store')}}" method="post">
+       <form action="{{route('contact.store')}}" method="post">
        @csrf
             <div>
               <div class="col-md-6">
@@ -43,4 +44,4 @@
 
           </form>
 
-@endsection
+          @endsection
