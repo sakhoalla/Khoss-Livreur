@@ -27,7 +27,7 @@
 <body id="page-top">
 
   <!-- Navigation --><br><br><br>
-  <br><br><br><br><br><br>
+  <br><br><br>
  
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
     <div class="container">
