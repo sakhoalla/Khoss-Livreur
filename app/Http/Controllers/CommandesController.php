@@ -18,7 +18,7 @@ class CommandesController extends Controller
     */
    public function create()
    {
-    $this->authorize('admin');
+    //$this->authorize('admin');
        return view('commandes.create');
    }
    /**
@@ -29,7 +29,7 @@ class CommandesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('admin');
+       // $this->authorize('admin');
         
         $data = $request->validate([
             'name'=>'required|max:100000',

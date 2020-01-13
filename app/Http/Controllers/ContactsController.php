@@ -18,7 +18,7 @@ class ContactsController extends Controller
     */
    public function create()
    {
-    $this->authorize('admin');
+    //$this->authorize('admin');
        return view('contacts.create');
    }
    /**
@@ -29,7 +29,7 @@ class ContactsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('admin');
+       // $this->authorize('admin');
         $data = $request->validate([
             'name'=>'required|max:50000',
             'email' => 'required|max:5000000',

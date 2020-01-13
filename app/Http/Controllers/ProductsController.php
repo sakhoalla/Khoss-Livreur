@@ -39,7 +39,7 @@ class ProductsController extends Controller
 */
 public function create()
 {
-    $this->authorize('admin');
+   // $this->authorize('admin');
    $categories = \App\Categorie::pluck('name','id');
    return view('products.create', compact('categories'));
 
@@ -55,7 +55,7 @@ public function create()
      */
     public function store(Request $request)
     {
-        $this->authorize('admin');
+       // $this->authorize('admin');
         $data = $request->validate([
             'name'=>'required|max:50',
             'prix' => 'required|max:5000000|numeric',

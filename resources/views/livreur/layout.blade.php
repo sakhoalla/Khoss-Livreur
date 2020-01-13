@@ -31,7 +31,7 @@
  
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">khoss@Livreur</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
 
@@ -75,7 +75,8 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{{ route('contact') }}">Contact</a>
           </li>
-         
+
+
          
        
 
@@ -127,6 +128,42 @@
 
 
 
+  @can('admin')
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+      <a href="/client"><button>Client</button></a>
+      </li>
+      <li class="nav-item active">
+      <a href="/livreur"><button>Livreur</button></a>
+      </li>
+      <li class="nav-item">
+      <a href="/product"><button>Product</button></a>
+      </li>
+      <li class="nav-item">
+      <a href="/commande"><button>Commande</button></a>
+      </li>
+      <li class="nav-item">
+      <a href="/categorie"><button>Categorie</button></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+@endcan
+
+
+
+
+
+
+
+
+
   <footer class="footer">
     <div class="container">
       <div class="row align-items-center">
@@ -164,6 +201,8 @@
         </div>
       </div>
     </div>
+
+         
   </footer>
     <!-- Bootstrap core JavaScript -->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
