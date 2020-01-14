@@ -18,7 +18,7 @@ class ClientssController extends Controller
     */
    public function create()
    {
-    $this->authorize('admin');
+   // $this->authorize('admin');
        return view('clients.create');
    }
    /**
@@ -29,7 +29,7 @@ class ClientssController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('admin');
+      //  $this->authorize('admin');
         $data = $request->validate([
             'name'=>'required|max:50000',
             'email' => 'required|max:5000000',
@@ -78,7 +78,7 @@ class ClientssController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $client = \App\Client::find($id);
+      // $client = \App\Client::find($id);
        if($client){
            $client->update([
                'name' => $request->input('name'),
